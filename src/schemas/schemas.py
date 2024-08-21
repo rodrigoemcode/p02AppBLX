@@ -11,7 +11,6 @@ class Usuario(BaseModel):
 
 class Produto(BaselModel):
     id: Optional[str] = None
-    usuario: Usuario
     nome: str
     detalhes: str
     preco: float
@@ -22,6 +21,6 @@ class Pedido(BaseModel):
     usuario: Usuario
     produto: Produto
     quantidade: int
-    status: bool = True
+    disponivel: bool = True
     endereco: str
     observacoes: Optional[str] = 'Sem observações'
